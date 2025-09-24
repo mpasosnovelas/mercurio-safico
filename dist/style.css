@@ -1,0 +1,544 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+}
+
+header, footer {
+  text-align: center;
+  padding: 3rem;
+}
+
+footer {
+  background-color: #000000;
+  color: #b5426c;
+  margin-bottom: 2rem;
+}
+footer p {
+  color: #b5426c;
+}
+
+nav div {
+  flex: 1 1 50%;
+}
+nav p {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+a {
+  color: #221A23;
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+nav a, .divider a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+nav a:hover, .divider a:hover {
+  text-decoration: underline;
+  color: #e9b34d;
+}
+nav a {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.post-card a {
+  color: #000000;
+}
+.post-card a:hover {
+  color: #ed9d04;
+}
+.social a {
+  transition: transform 0.2s ease;
+}
+.social a:hover {
+  transform: translateY(-5px);
+}
+
+h1, h2, h3, h4 {
+  font-family: "Cinzel", serif;
+  margin: 0;
+}
+
+.blog-post h2, .blog-post h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+h1 {
+  color: #000000;
+  font-optical-sizing: auto;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.blog-post h1 {
+  text-align: center;
+  line-height: 1.25;
+}
+
+h2 {
+  color: #221A23;
+  font-size: 3rem;
+}
+
+h3 {
+  color: #221A23;
+  font-size: 2.125rem;
+}
+
+h4 {
+  /* Título del post */
+}
+.post-card h4 {
+  border-bottom: 1px solid #000000;
+  margin: 0 0 1rem 0;
+  padding: 0 0 0.5rem;
+  text-align: left;
+}
+blockquote h4 {
+  justify-self: end;
+}
+
+ol, p, ul {
+  color: #4D4D4D;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+p.setup {
+  margin-bottom: 0;
+}
+
+blockquote {
+  flex: 1 1 40%;
+  max-width: 48%;
+  margin: 2rem 0;
+  padding: 1.2rem 1.5rem;
+  background-color: #f7f0ea;
+  border-left: 5px solid #924e91;
+  font-style: italic;
+  color: #5c4b4f;
+}
+
+footer img {
+  max-width: 6rem;
+  margin-bottom: 0.5rem;
+}
+.blog-post img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+}
+.cover img {
+  max-width: 100%;
+  height: auto;
+}
+.covers img {
+  width: 100%;
+  height: 100%;
+}
+.logo img {
+  max-width: 5rem;
+}
+.author-photo img {
+  width: 100%;
+}
+.post-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.social img {
+  flex: 1 1 30%;
+  max-width: 70px;
+  padding: 1rem;
+}
+
+.read-watt,
+.read-more {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.read-watt:hover,
+.read-more:hover {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  background: #ed9d04;
+}
+
+.read-watt {
+  background: #dd8047;
+}
+
+.read-more {
+  background-color: #e9b34d;
+}
+
+.third-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.75rem;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
+.social.flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* JUSTIFY */
+nav,
+.novel {
+  justify-content: space-around;
+}
+
+.about,
+.criticas,
+.hero,
+.posts-grid,
+.post-navigation,
+.reviews {
+  justify-content: space-between;
+}
+
+.divider,
+.hero,
+.social {
+  justify-content: center;
+}
+
+/* ALIGNMENT */
+.about,
+.divider,
+.hero,
+.social {
+  align-items: center;
+}
+
+/* SECTION COLORS */
+section:first-of-type {
+  background-color: rgba(233, 178, 77, 0.1019607843);
+}
+
+section:nth-of-type(2n) {
+  background-color: rgba(238, 212, 169, 0.1215686275);
+}
+
+section:nth-of-type(3n) {
+  background-color: #f7f0ea;
+}
+
+/*section:nth-of-type(5),
+section:nth-of-type(7){
+  background-color: $fourth-bg;
+}*/
+.about .author-photo {
+  margin: 0 auto 3rem;
+  max-width: 600px;
+}
+@media (min-width: 900px) {
+  .about .author-photo {
+    flex: 1 1 40%;
+    max-width: 40%;
+  }
+}
+.about .author-bio {
+  text-align: center;
+}
+@media (min-width: 900px) {
+  .about .author-bio {
+    flex: 1 1 50%;
+    max-width: 50%;
+    text-align: left;
+  }
+}
+
+.blog, .blogfooter {
+  text-align: center;
+}
+
+.blog-post {
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.75;
+  font-size: 1.125rem;
+}
+
+.centered {
+  text-align: center;
+}
+.centered p {
+  max-width: 850px;
+  margin: auto;
+}
+
+.content {
+  max-width: 1479px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.cover img {
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+.cover img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.covers {
+  padding: 3rem 0;
+}
+.covers div {
+  flex: 1 1 50%;
+  max-width: 50%;
+  transition: transform 0.2s ease;
+  margin: 0 auto 2rem;
+}
+.covers div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.covers div img {
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 900px) {
+  .covers div {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+}
+@media (min-width: 1600px) {
+  .covers div {
+    flex: 1 1 15%;
+    max-width: 16%;
+  }
+}
+@media (min-width: 1600px) {
+  .covers div:not(:last-of-type) {
+    margin-right: 1%;
+  }
+}
+
+.date {
+  font-style: italic;
+  font-size: 0.875rem;
+  color: #4D4D4D;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.divider {
+  max-width: 850px;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.escena {
+  margin: 3rem auto;
+  position: relative;
+}
+.escena:before {
+  content: "“"; /* Comilla de apertura bonita */
+  font-family: Georgia, serif;
+  font-size: 40rem;
+  color: #e0b4b4;
+  position: absolute;
+  left: 40%;
+  top: -100px;
+  line-height: 1;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.heroleft {
+  max-width: 95%;
+}
+@media (min-width: 1600px) {
+  .heroleft {
+    flex: 1 1 30%;
+    max-width: 30%;
+    text-align: center;
+  }
+}
+
+.heroright {
+  margin-top: 3rem;
+  max-width: 95%;
+  text-align: center;
+}
+@media (min-width: 1600px) {
+  .heroright {
+    flex: 1 1 60%;
+    max-width: 40%;
+  }
+}
+
+.novel .cover {
+  flex: 1 1 70%;
+  max-width: 70%;
+}
+@media (min-width: 900px) {
+  .novel .cover {
+    flex: 1 1 40%;
+    max-width: 40%;
+  }
+}
+@media (min-width: 1600px) {
+  .novel .cover {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+}
+.novel .noveldata {
+  flex: 1 1 60%;
+  align-self: center;
+  padding-left: 15%;
+}
+
+.novels {
+  text-align: center;
+}
+
+.post-card {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.posts-grid {
+  margin: 3rem 0;
+  flex: 1 1 90%;
+  max-width: 95%;
+}
+@media (min-width: 900px) {
+  .posts-grid article {
+    flex: 1 1 30%;
+    max-width: 32%;
+  }
+}
+@media (min-width: 1600px) {
+  .posts-grid article {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+}
+
+.post-navigation {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+.post-navigation a {
+  margin-bottom: 3rem;
+}
+@media (min-width: 900px) {
+  .post-navigation a {
+    flex: 1 1 40%;
+    max-width: 35%;
+    margin-bottom: 0;
+  }
+}
+
+.post-tags {
+  margin: 1rem 0;
+}
+.post-tags .tag {
+  display: inline-block;
+  padding-right: 1rem;
+  font-size: 0.875rem;
+  margin-right: 1rem;
+}
+.post-tags .tag:not(:last-of-type) {
+  border-right: 1px solid black;
+}
+
+.reviews .cover {
+  flex: 1 1 40%;
+  max-width: 50%;
+  margin: 0 auto 4rem;
+}
+@media (min-width: 900px) {
+  .reviews .cover {
+    flex: 1 1 50%;
+    max-width: 45%;
+  }
+}
+@media (min-width: 1600px) {
+  .reviews .cover {
+    flex: 1 1 45%;
+    max-width: 40%;
+  }
+}
+.reviews .revtexts {
+  text-align: center;
+  flex: 1 1 100%;
+  max-width: 95%;
+}
+@media (min-width: 900px) {
+  .reviews .revtexts {
+    flex: 1 1 50%;
+    max-width: 45%;
+  }
+}
+@media (min-width: 1600px) {
+  .reviews .revtexts {
+    flex: 1 1 60%;
+    max-width: 50%;
+  }
+}
+
+.social {
+  margin: 3rem auto;
+}
+
+.soundtrack {
+  margin: 3rem auto;
+  max-width: 500px;
+}
+
+.wrap {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+@media (min-width: 1600px) {
+  .wrap div {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+  .wrap div:nth-of-type(odd) {
+    margin-right: 4%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
