@@ -1,0 +1,84 @@
+{% extends "layout.njk" %}
+{% block title %}Novela{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="content novel flex">
+    <div class="cover">
+      <img src="{{ thumbnail }}" alt="{{ title }}">
+    </div>
+    <div class="noveldata">
+        <h1>Novela</h1>
+        <h3>{{ title }}</h3>
+        <h4>Temas: {{ tags }}</span></h4>
+        {{ content | safe }}
+        <a href="{{ wattpadlink }}" class="read-watt">Leer en Wattpad →</a>
+        {% if amazonlink %}
+          <a href="{{ amazonlink }}" class="read-more">Comprar en Amazon →</a>
+        {% endif %}
+    </div>
+  </div>
+</section>
+<section>
+  <div class="content">
+    <h3>Críticas</h3>
+    <div class="criticas flex">
+      <blockquote>
+        <p>{{ criticauno }}</p>
+        <h4>—{{ autoruno }}</h4>
+      </blockquote>
+      <blockquote>
+        <p>{{ criticados }}</p>
+        <h4>—{{ autordos }}</h4>
+      </blockquote>
+      <blockquote>
+        <p>{{ criticatres }}</p>
+        <h4>—{{ autortres }}</h4>
+      </blockquote>
+      <blockquote>
+        <p>{{ criticacuatro }}</p>
+        <h4>—{{ autorcuatro }}</h4>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+{% if soundtrack %}
+<section>
+  <div class="content centered">
+    <h3>Soundtrack</h3>
+    <p>A veces, la música nos sirve de inspiración. Para mí, resulta indispensable durante mi proceso creativo. Cada escena que escribo tiene música de fondo, así que me gusta crear listas de reproducción para la mayoría de mis novelas.</p>
+    <div class="soundtrack">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/{{ soundtrack }}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if escenafav %}
+<section>
+  <div class="content centered">
+    <h3>Escena favorita</h3>
+    <div class="escena">
+      <p>«{{ escenafav }}».</p>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section>
+  <div class="content">
+  <h3>Todas mis novelas</h3>
+  <p>Aquí encontrarás una historia de amor sáfico para cada gusto. ¿Te gusta llorar con el desamor? Entonces lee <em>Persiguiendo espejismos</em>. Si te gusta el futbol y el inocente amor entre adolescentes, entonces <em>Ingrid y Celeste</em> podría ser para ti. Si te gustan las historias <em>slow burn</em> las dos de Mercurio podrían gustarte.</p>
+  <div class="covers flex">
+    <div><a href="/mudemonos-a-mercurio/"><img alt="Novela de Mireille Pasos" src="/assets/images/mudemonos-a-mercurio.png"></a></div>
+    <div><a href="/los-años-son-mas-cortos-en-mercurio/"><img alt="Novela de Mireille Pasos" src="/assets/images/los-años-son-mas-cortos-en-mercurio.jpg"></a></div>
+    <div><a href="/las-cosas-que-no-nos-dijimos/"><img alt="Novela de Mireille Pasos" src="/assets/images/las-cosas-que-no-nos-dijimos.png"></a></div>
+    <div><a href="/solo-a-ella/"><img alt="Novela de Mireille Pasos" src="/assets/images/solo-a-ella.png"></a></div>
+    <div><a href="/persiguiendo-espejismos/"><img alt="Novela de Mireille Pasos" src="/assets/images/persiguiendo-espejismos.jpg"></a></div>
+    <div><a href="/ingrid-y-celeste/"><img alt="Novela de Mireille Pasos" src="/assets/images/ingrid-y-celeste.png"></a></div>
+  </div>
+  </div>
+</section>
+{% endblock %}

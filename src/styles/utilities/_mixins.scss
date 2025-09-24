@@ -1,0 +1,12 @@
+// _mixins.scss
+@mixin breakpoint($point) {
+  @if map-has-key($breakpoints, $point) {
+    $width: map-get($breakpoints, $point);
+    @media (min-width: $width) {
+      @content;
+    }
+  } @else {
+    // Handle cases where the breakpoint name is not defined in the map
+    @warn "Breakpoint '#{$point}' not found in $breakpoints map.";
+  }
+}

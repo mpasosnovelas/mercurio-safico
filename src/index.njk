@@ -1,0 +1,111 @@
+---
+layout: layout.njk
+title: Inicio
+---
+
+<section>
+  <div class="content hero flex">
+    <div class="heroleft">
+      <img alt="Novela de Mireille Pasos" src="/assets/images/pluma.png">
+    </div>
+    <div  class="heroright">
+        <h1>Mireille Pasos</h1>
+        <p class="third-title">Escribo historias que nacen del corazón, se complican en la mente y culminan en libros con mucho amor… y a veces con un poquito de drama también (¡qué le vamos a hacer!).</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="content novels">
+    <p class="setup">Mis novelas</p>
+    <h2>Romance sáfico</h2>
+    <div class="covers flex">
+      <div><a href="/mudemonos-a-mercurio/"><img alt="Novela de Mireille Pasos" src="/assets/images/mudemonos-a-mercurio.png"></a></div>
+      <div><a href="/los-años-son-mas-cortos-en-mercurio/"><img alt="Novela de Mireille Pasos" src="/assets/images/los-años-son-mas-cortos-en-mercurio.jpg"></a></div>
+      <div><a href="/las-cosas-que-no-nos-dijimos/"><img alt="Novela de Mireille Pasos" src="/assets/images/las-cosas-que-no-nos-dijimos.png"></a></div>
+      <div><a href="/solo-a-ella/"><img alt="Novela de Mireille Pasos" src="/assets/images/solo-a-ella.png"></a></div>
+      <div><a href="/persiguiendo-espejismos/"><img alt="Novela de Mireille Pasos" src="/assets/images/persiguiendo-espejismos.jpg"></a></div>
+      <div><a href="/ingrid-y-celeste/"><img alt="Novela de Mireille Pasos" src="/assets/images/ingrid-y-celeste.png"></a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="content reviews flex">
+    <div class="cover">
+      <a href="/las-cosas-que-no-nos-dijimos/"><img alt="Novela de Mireille Pasos" src="/assets/images/las-cosas-que-no-nos-dijimos.png"></a>
+    </div>
+    <div class="revtexts">
+      <h2>Críticas</h2>
+      <p class="third-title">Mis lectoras me han acompañado en Wattpad y en Amazon Kindle por años. Éstas son algunas de sus opiniones.</p>
+      <div class="wrap flex">
+        <div>
+          <p>"Definitivamente esta historia una de mis favoritas ❤️. Me ha traído tantos recuerdos, y puedo sentirme identificada con muchas de las situaciones que vivió Andy. Me ha hecho ver todo en retrospectiva y estar agradecida por esos amigos geniales, y todo lo que me llevó a conocer a mi mujer y lo que tuvimos que superar para estar juntas. Gracias por escribir esta historia y publicarla."</p>
+          <p class="reader">—Elsa</p>
+        </div>
+        <div>
+          <p>"Una historia maravillosa de principio a fin, la viví al máximo. <em>Las cosas que no nos dijimos</em>, me dijo que nunca es tarde para aprender a soltar el pasado pues eso te sana y llena de paz, que una conversación a tiempo bien podría cambiarte la vida. No te guardes nada para mañana, ama, vive, disfruta, sé libre y feliz, de aquellos que te hicieron daño, ya se encargará la vida, guardar rencor te estanca, romper patrones dañinos te libera. ¡Amé esta historia!"</p>
+          <p class="reader">—VP</p>
+        </div>
+        <div>
+          <p>"Al leer el título me he dado cuenta de lo genial que es. Toda la historia en torno a las cosas que los personajes se guardan. Me recuerda a la ventana de Johari con todas las cosas que nos guardamos sobre nosotros mismos y las que tampoco nos dicen los demás. Todos tienen sus propios relatos de la historia y las piezas solo encajan cuando por fin se sinceran."</p>
+          <p class="reader">—EG</p>
+        </div>
+        <div>
+          <p>"Me encantó. La forma en la que armas la historia para hacerla tan atrapante, emotiva. Confieso que me reí mucho y lloré otro tanto. Como mantenes "oculta" la identidad de la esposa es maravillosa 👏👏👏👏"</p>
+          <p class="reader">—Inés</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="content blog">
+    <p class="setup"><a href="/blog/">Blog</a></p>
+    <h2>Entradas más recientes</h2>
+    <div class="posts-grid flex">
+      {% for post in collections.posts.slice(0,3) %}
+        <article class="post-card">
+          <a href="{{ post.url }}">
+            <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}">
+            <p class="date">{{ post.date | fechaES }}</p>
+            <h4>{{ post.data.title }}</h4>
+            <div class="post-tags">
+              {% for tag in post.data.tags %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="content about flex">
+    <div class="author-photo">
+      <img alt="Novela de Mireille Pasos" src="/assets/images/mia2024.jpg">
+    </div>
+    <div class="author-bio">
+      <h2>Mireille Pasos</h2>
+      <p class="third-title">Un poco sobre mí</p>
+      <p>Nací en Mérida, Yucatán, en donde el calor no solo se siente en la piel, sino también en los abrazos, las risas y los tacos de la esquina. Más adelante me mudé a Cancún, en donde conocí al amor de mi vida, mi copilota de vida, aventuras y viajes, y la musa que le da cuerda a esta imaginación inquieta. Juntas, ahora vivimos en una pequeña ciudad de Canadá, entre nieves eternas y <em>playlists</em> tropicales.</p>
+      <a class="read-more" href="/sobre-mi/">Más sobre mí</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="content divider">
+    <p class="setup">Mis redes</p>
+    <h3>En dónde encontrarme</h3>
+      <p>Si quieres saber más sobre mis historias, pásate por alguna de mis redes, en Wattpad puedes encontrar las versiones gratuitas de mis novelas y algunas otras historias que no he publicado en ningún otro medio. En Instagram y TikTok puedes encontrar alguno que otro spoiler inocente o curiosidades que voy posteando de mi día a día.</p>
+      <div class="social flex">
+        <a href="https://www.wattpad.com/user/mpasos" target="_blank"><img alt="Novela de Mireille Pasos" src="/assets/images/wattpad.png"></a>
+        <a href="https://www.tiktok.com/@pasos.mia" target="_blank"><img alt="Novela de Mireille Pasos" src="/assets/images/tik-tok.png"></a>
+        <a href="https://www.instagram.com/mpasos_novelas" target="_blank"><img alt="Novela de Mireille Pasos" src="/assets/images/instagram.png"></a>
+      </div>
+  </div>
+</section>

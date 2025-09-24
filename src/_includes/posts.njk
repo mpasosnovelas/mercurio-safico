@@ -1,0 +1,45 @@
+{% extends "layout.njk" %}
+{% block title %}Entrada del blog{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="content">
+    <div class="blog-post">
+      <h3>{{ title }}</h3>
+      <p class="date">{{ page.date | fechaES }} </p>
+      <img src="{{ thumbnail }}" alt="{{ title }}">
+      {{ content | safe }}
+    </div>
+  </div>
+</section>
+
+{% set posts = collections.posts | sort(attribute='date') %}
+{% set currentIndex = -1 %}
+
+{# Encontrar el índice del post actual en la colección #}
+{% for post in posts %}
+  {% if post.url == page.url %}
+    {% set currentIndex = loop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{# Solo mostrar navegación si encontramos el post actual #}
+{% if currentIndex >= 0 %}
+<section>
+  <div class="content blogfooter">
+    <h3>Sigue leyendo</h3>
+    <nav class="post-navigation flex">
+      {% if posts[currentIndex - 1] %}
+        <a href="{{ posts[currentIndex - 1].url }}">← {{ posts[currentIndex - 1].data.title }}</a>
+      {% endif %}
+
+      {% if posts[currentIndex + 1] %}
+        <a href="{{ posts[currentIndex + 1].url }}">{{ posts[currentIndex + 1].data.title }} →</a>
+      {% endif %}
+   </nav>
+   {% endif %}
+   </div>
+ </section>
+
+{% endblock %}

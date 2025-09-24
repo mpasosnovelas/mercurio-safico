@@ -1,0 +1,360 @@
+// ======================================
+//  Containers
+// ======================================
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include breakpoint(medium) {
+    flex-direction: row;
+  }
+}
+
+.social.flex{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* JUSTIFY */
+nav,
+.novel{
+  justify-content: space-around;
+}
+
+.about,
+.criticas,
+.hero,
+.posts-grid,
+.post-navigation,
+.reviews{
+  justify-content: space-between;
+}
+
+.divider,
+.hero,
+.social{
+   justify-content: center;
+ }
+
+/* ALIGNMENT */
+.about,
+.divider,
+.hero,
+.social{
+   align-items: center;
+ }
+
+
+/* SECTION COLORS */
+section:first-of-type{
+  background-color: $secondary-bg;
+}
+
+section:nth-of-type(2n){
+  background-color: $third-bg;
+}
+
+section:nth-of-type(3n){
+  background-color: $fourth-bg;
+}
+
+/*section:nth-of-type(5),
+section:nth-of-type(7){
+  background-color: $fourth-bg;
+}*/
+
+.about{
+  .author-photo{
+    margin: 0 auto 3rem;
+    max-width: 600px;
+
+    @include breakpoint(medium) {
+      flex: 1 1 40%;
+      max-width: 40%;
+    }
+  }
+
+  .author-bio{
+    text-align: center;
+
+    @include breakpoint(medium) {
+      flex: 1 1 50%;
+      max-width: 50%;
+      text-align: left;
+    }
+  }
+}
+
+.blog, .blogfooter{
+  text-align: center;
+}
+
+.blog-post{
+  max-width: 750px;
+  margin: 0 auto;
+  //padding: 3rem 1.5rem;
+  line-height: 1.75;
+  font-size: $main-content;
+}
+
+.centered{
+  text-align: center;
+
+  p{
+    max-width: 850px;
+    margin: auto;
+  }
+}
+
+.content{
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.cover img{
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+}
+
+.covers{
+  padding: 3rem 0;
+
+  div{
+    flex: 1 1 50%;
+    max-width: 50%;
+    transition: transform 0.2s ease;
+    margin: 0 auto 2rem;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    img{
+      box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    @include breakpoint(medium) {
+      flex: 1 1 30%;
+      max-width: 30%;
+    }
+
+    @include breakpoint(large) {
+      flex: 1 1 15%;
+      max-width: 16%;
+    }
+  }
+
+  div:not(:last-of-type){
+    @include breakpoint(large) {
+      margin-right: 1%;
+    }
+  }
+}
+
+.date {
+  font-style: italic;
+  font-size: $font-small;
+  color: $primary-color;
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+
+.divider {
+  max-width: 850px;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.escena{
+  margin: 3rem auto;
+  position: relative;
+
+  &:before{
+    content: "“"; /* Comilla de apertura bonita */
+    font-family: Georgia, serif;
+    font-size: 40rem;
+    color: #e0b4b4;
+    position: absolute;
+    left: 40%;
+    top: -100px;
+    line-height: 1;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}
+
+.heroleft{
+  max-width: 95%;
+
+  @include breakpoint(large) {
+     flex: 1 1 30%;
+     max-width: 30%;
+     text-align: center;
+   }
+}
+
+.heroright{
+  margin-top: 3rem;
+  max-width: 95%;
+  text-align: center;
+
+  @include breakpoint(large) {
+    flex: 1 1 60%;
+    max-width: 40%;
+  }
+}
+
+.novel{
+  .cover{
+      flex: 1 1 70%;
+      max-width: 70%;
+
+      @include breakpoint(medium) {
+        flex: 1 1 40%;
+        max-width: 40%;
+      }
+
+      @include breakpoint(large) {
+        flex: 1 1 30%;
+        max-width: 30%;
+      }
+  }
+
+  .noveldata{
+      flex: 1 1 60%;
+      align-self: center;
+      padding-left: 15%;
+  }
+}
+
+.novels{
+  text-align: center;
+}
+
+.post-card {
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.posts-grid {
+    margin: 3rem 0;
+    flex: 1 1 90%;
+    max-width: 95%;
+
+    article{
+      @include breakpoint(medium) {
+        flex: 1 1 30%;
+        max-width: 32%;
+      }
+
+      @include breakpoint(large) {
+        flex: 1 1 30%;
+        max-width: 30%;
+      }
+    }
+}
+
+.post-navigation{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    width: 100%;
+
+    a{
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint(medium) {
+
+      a{
+        flex: 1 1 40%;
+        max-width: 35%;
+        margin-bottom: 0;
+      }
+    }
+}
+
+.post-tags {
+  margin: 1rem 0;
+
+  .tag {
+    display: inline-block;
+    padding-right: 1rem;
+    font-size: $font-small;
+    margin-right: 1rem;
+
+    &:not(:last-of-type){
+      border-right: 1px solid black;
+    }
+  }
+}
+
+.reviews{
+  .cover{
+      flex: 1 1 40%;
+      max-width: 50%;
+      margin: 0 auto 4rem;
+
+      @include breakpoint(medium) {
+        flex: 1 1 50%;
+        max-width: 45%;
+      }
+
+      @include breakpoint(large) {
+        flex: 1 1 45%;
+        max-width: 40%;
+      }
+  }
+
+  .revtexts{
+    text-align: center;
+    flex: 1 1 100%;
+    max-width: 95%;
+
+    @include breakpoint(medium) {
+      flex: 1 1 50%;
+      max-width: 45%;
+    }
+
+    @include breakpoint(large) {
+      flex: 1 1 60%;
+      max-width: 50%;
+    }
+  }
+}
+
+.social{
+  margin: 3rem auto;
+}
+
+.soundtrack{
+  margin: 3rem auto;
+  max-width: 500px;
+}
+
+.wrap{
+  flex: 1 1 100%;
+  max-width: 100%;
+
+  @include breakpoint(large) {
+    div{
+      flex: 1 1 45%;
+      max-width: 45%;
+    }
+
+    div:nth-of-type(odd){
+      margin-right: 4%;
+    }
+  }
+}

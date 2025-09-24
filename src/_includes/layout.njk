@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}{{ title }}{% endblock %}</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    {% block header %}
+    <nav>
+      <div class="logo">
+        <a href="/"><img alt="Novelas de Mireille Pasos" src="/assets/images/mercurio-logo.png"></a>
+        <h3><a href="/">Mercurio Sáfico</a></h3>
+        <p>Un espacio seguro para lectoras de amor entre mujeres</p>
+      </div>
+      <div>
+        <a href="/">Inicio</a> |
+        <a href="/sobre-mi/">Sobre mí</a> |
+        <a href="/blog/">Blog</a>
+      </div>
+       {% endblock %}
+    </nav>
+  </header>
+  <main>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}
+  </main>
+  <footer>
+    {% block footer %}
+      <a href="/"><img alt="Novelas de Mireille Pasos" src="/assets/images/mercurio-logo.png"></a>
+      <h4>Mercurio Sáfico</h4>
+      <p>Un espacio seguro para lectoras de romance y amor entre mujeres.<br>Hecho con café, sueños y código propio.</p>
+      <p>© 2025 Mireille Pasos</p>
+    {% endblock %}
+  </footer>
+</body>
+</html>

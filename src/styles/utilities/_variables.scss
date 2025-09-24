@@ -1,0 +1,59 @@
+//=======================================
+//         Global Variables
+//=======================================
+
+$font-family--primary	 : 'Cormorant Garamond', serif;
+$font-family--headers  : 'Cinzel', serif;
+
+//Font Weights
+$font-weight--regular   : 400;
+$font-weight--bolder    : 600;
+$font-weight--black     : 700;
+
+//Font Sizes
+$author-name            : 4rem;
+$headers                : 3.5rem;
+$subheaders             : 3rem;
+$third-header           : 2.125rem;
+$font-large             : 1.75rem;
+$main-title             : 1.5rem;
+$highlights             : 1.25rem;
+$main-content           : 1.125rem;
+$font-small             : .875rem;
+
+// COLORS
+$beige:       #dd804730;
+$beige-dark:  #e9b24d1a;
+$beige-light: #eed4a91f;
+$black:       #000000;
+$grey:        #4D4D4D;
+$grey-dark:   #221A23;
+$gold:        #e9b34d;
+$gold-dark:   #ed9d04;
+$orange:      #dd8047;
+$purple:      #f7f0ea;
+$pink:        #b5426c;
+
+
+//#ddb94b2b
+
+// Color Scheme
+$primary-color:   $grey;
+$secondary-color: $black;
+$accent-color:    $grey-dark;
+$main-bg:         $beige;
+$secondary-bg:    $beige-dark;
+$third-bg:        $beige-light;
+$fourth-bg:       $purple;
+$wtpbutton:       $orange;
+$ftcolor:         $pink;       
+
+// Layout
+$max-width: 1479px;
+
+// Breakpoints Map
+$breakpoints: (
+     small: 600px,
+     medium: 900px,
+     large: 1600px
+);
