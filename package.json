@@ -1,0 +1,24 @@
+{
+  "name": "mia-novelas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"npm run sass:watch\" \"npx eleventy --serve\"",
+    "sass:watch": "sass src/styles/style.scss:dist/style.css --watch",
+    "sass:build": "sass src/styles/style.scss:dist/style.css",
+    "build": "npm run sass:build && npx eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "concurrently": "^8.0.0",
+    "sass": "^1.77.0"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.4"
+  }
+}
